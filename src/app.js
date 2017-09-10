@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import firebase from 'firebase';
 import Config from 'react-native-config';
 import { Header } from './components/common';
