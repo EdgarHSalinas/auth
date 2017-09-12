@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import Config from 'react-native-config';
 import firebase from 'firebase';
-import { Header, Button, CardSection, Spinner } from './components/common';
+import { Header, Button, Spinner } from './components/common';
 import LoginForm from './components/LoginForm';
 
 class App extends Component {
@@ -33,17 +33,21 @@ class App extends Component {
             case true:
                 return (
                     <View style={{ height: 45 }}>
-                    <Button>Log Out</Button>
+                        <Button onPress={() => firebase.auth().signOut()}>
+                            Log Out
+                        </Button>
                     </View>
                     );
             case false:
                 return <LoginForm />;
             default:
                 return (
+
+                    // To Do Center Spinner in the Middle and bigger
                     <View 
                         style={{ marginTop: 45 }}
                     >
-                        <Spinner style={{ size: 'large' }} />
+                        <Spinner />
                         
                     </View>
                 );
