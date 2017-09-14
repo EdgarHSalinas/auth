@@ -1,6 +1,6 @@
-# Project Title
+# React Native Auth Login Form
 
-One Paragraph of project description goes here
+React Native Login with Firebase.
 
 ## Getting Started
 
